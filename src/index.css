@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global responsive fixes */
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* Prevent horizontal scroll on zoom */
+* {
+  box-sizing: border-box;
+}
+
+/* Responsive font scaling */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Yellowish border and shadow utilities */
+.yellow-border {
+  border-color: #facc15 !important; /* Tailwind yellow-400 */
+}
+.yellow-shadow {
+  box-shadow: 0 4px 16px 0 #fde04755, 0 1.5px 0 0 #facc15;
+}
+
+/* Yellow scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #fffbe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #fde047;
+  border-radius: 8px;
+  border: 2px solid #facc15;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fde047 #fffbe6;
+}
